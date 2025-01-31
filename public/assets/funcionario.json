@@ -1,0 +1,22 @@
+[
+  {
+    "id" : 1,
+    "nome": "Carlos",
+    "sobrenome": "Lima",
+    "departamento": "Financeiro",
+    "ativo": true,
+    "turno": "Diurno",
+    "dataDeCriacao": null,
+    "dataDeAlteracao": null
+  },
+  {
+    "id" : 2,
+    "nome": "Marcos",
+    "sobrenome": "Sacramento",
+    "departamento": "Logística",
+    "ativo": true,
+    "turno": "Diurno",
+    "dataDeCriacao": null,
+    "dataDeAlteracao": null
+  }
+]
