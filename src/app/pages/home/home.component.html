@@ -20,18 +20,26 @@
   </thead>
 
   <tbody>
-    <tr>
-      <td>
-        <img src="assets/images/Ativo.png" alt="" style="height: 20px; width: 20px;">
-      </td>
-      <td>{{employees[1].nome}}</td>
-      <td>{{ employees[1].sobrenome }}</td>
-      <td>{{ employees[1].departamento }}</td>
-      <td>
-        <button>Editar</button>
-        <button>Detalhes</button>
-      </td>
-      <td><button>Excluir</button></td>
-    </tr>
+
+    @for (employee of employees; track $index) {
+      <tr>
+        <td>
+          @if (employee.ativo) {
+            <img src="assets/images/Ativo.png" alt="" style="height: 20px; width: 20px;">
+          }@else {
+            <img src="assets/images/Inativo.png" alt="" style="height: 20px; width: 20px;">
+          }
+        </td>
+        <td>{{ employee.nome }}</td>
+        <td>{{ employee.sobrenome }}</td>
+        <td>{{ employee.departamento }}</td>
+        <td>
+          <button>Editar</button>
+          <button>Detalhes</button>
+        </td>
+        <td><button>Excluir</button></td>
+      </tr>
+    }
+
   </tbody>
 </table>

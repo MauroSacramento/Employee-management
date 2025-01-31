@@ -13,9 +13,15 @@ export class HomeComponent {
   employees: Funcionario[] = [];
 
   constructor(private funcionarioService: FuncionarioService){
-    this.funcionarioService.GetEmployees().subscribe({
-      next: data => this.employees = data,
-      complete: () => console.log(this.employees)
+    this.funcionarioService.GetEmployees().subscribe(data => {
+      const dados = data;
+
+      dados.map((item) => {
+        item.dataDeAlteracao = new Date().toLocaleDateString('pt-BR');
+      })
+
+      this.employees = dados;
+      console.log(this.employees)
     });
   }
 

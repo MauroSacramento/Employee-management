@@ -6,7 +6,7 @@
     "departamento": "Financeiro",
     "ativo": true,
     "turno": "Diurno",
-    "dataDeCriacao": null,
+    "dataDeCriacao": "31-01-2025",
     "dataDeAlteracao": null
   },
   {
@@ -14,9 +14,9 @@
     "nome": "Marcos",
     "sobrenome": "Sacramento",
     "departamento": "Logística",
-    "ativo": true,
+    "ativo": false,
     "turno": "Diurno",
-    "dataDeCriacao": null,
+    "dataDeCriacao": "25-12-2024",
     "dataDeAlteracao": null
   }
 ]
