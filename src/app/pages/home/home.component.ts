@@ -11,6 +11,7 @@ import { Funcionario } from '../../models/Funcionario';
 })
 export class HomeComponent {
   employees: Funcionario[] = [];
+  employeesGeral: Funcionario[] = [];
 
   constructor(private funcionarioService: FuncionarioService){
     this.funcionarioService.GetEmployees().subscribe(data => {
@@ -21,8 +22,18 @@ export class HomeComponent {
       })
 
       this.employees = dados;
-      console.log(this.employees)
+      this.employeesGeral = dados;
+
     });
+  }
+
+  search(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+
+    this.employees = this.employeesGeral.filter((funcionario) => {
+      return funcionario.nome.toLowerCase().includes(value)
+    })
   }
 
 }
